@@ -1,0 +1,264 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* ========================= */
+/* LAYOUT */
+/* ========================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.sidebar {
+  width: 220px;
+  background: #111827;
+  padding: 30px 20px;
+  border-right: 1px solid #1f2937;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.sidebar li.active {
+  background: #1e293b;
+  color: white;
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.dashboard-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 40px;
+}
+
+/* ========================= */
+/* CARD 3D */
+/* ========================= */
+
+.card-flip {
+  width: 100%;
+  height: 220px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.card-flip.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  padding: 24px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-front {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.card-back {
+  background: #111827;
+  border: 1px solid #334155;
+  transform: rotateY(180deg);
+}
+
+.card-chip {
+  width: 42px;
+  height: 30px;
+  background: #64748b;
+  border-radius: 4px;
+}
+
+.card-number {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #f1f5f9;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ========================= */
+/* BALANCE PANEL */
+/* ========================= */
+
+.balance-panel {
+  margin-top: 30px;
+  padding: 20px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+}
+
+.balance-panel h3 {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.balance-panel p {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.primary-btn {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ========================= */
+/* RIGHT SIDE */
+/* ========================= */
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ========================= */
+/* ANALYTICS */
+/* ========================= */
+
+.analytics-box {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.analytics-box h3 {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.analytics-box p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* HISTORY */
+/* ========================= */
+
+.history-box {
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.history-box h3 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #94a3b8;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #1f2937;
+  font-size: 14px;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
